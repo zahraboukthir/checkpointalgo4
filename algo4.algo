@@ -1,0 +1,20 @@
+ALGORITHM Insertion_sort
+VAR
+    arr : ARRAY_OF_INTEGER;
+    i,j,k: INTEGER;
+BEGIN
+    j:=2;
+    WHILE (j<=arr.length) DO
+        i:=j-1;
+        k:=arr[j];
+        WHILE (i>0 AND arr[i]>k) DO
+            arr[i+1]=arr[i];
+            i=i-1;
+        END_WHILE
+        arr[i+1]=k
+        j=j+1
+    END_WHILE
+    write(arr);
+END
+
+
